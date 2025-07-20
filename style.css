@@ -1,0 +1,344 @@
+/* Basic reset and body styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212; /* Dark background for the player */
+  color: #fff; /* White text color */
+  overflow: hidden; /* Prevent scrollbar due to transitions */
+}
+
+/* Header styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #1db954; /* Spotify Green */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+.header-logo {
+  height: 30px; /* Size for the logo */
+  margin-right: 10px;
+}
+
+/* Main container for layout */
+.container {
+  display: flex;
+  height: calc(100vh - 65px); /* Full viewport height minus header height */
+}
+
+/* Playlist sidebar styling */
+aside#playlist {
+  width: 280px;
+  background-color: #000000; /* Even darker for playlist sidebar */
+  padding: 20px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hiding/showing */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0; /* Prevent shrinking when main content expands */
+}
+
+/* Class to hide the playlist */
+aside#playlist.hidden {
+  transform: translateX(-100%); /* Move off-screen to the left */
+  position: absolute; /* Allows main content to take full width */
+}
+
+aside h3 {
+  color: #1db954;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+aside h3 .material-icons {
+    margin-right: 8px; /* Spacing for icon in heading */
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  padding: 12px 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  font-size: 0.95em;
+  color: #b3b3b3; /* Lighter grey for inactive songs */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* To push duration to the right */
+}
+
+aside li:hover {
+  background-color: #282828; /* Darker grey on hover */
+  color: #fff;
+}
+
+/* Styling for the currently active song in the playlist */
+aside li.active {
+  background-color: #1db954; /* Spotify Green for active song */
+  color: #fff;
+  font-weight: bold;
+}
+
+aside li .song-duration {
+    font-size: 0.8em;
+    color: #808080;
+}
+
+aside li.active .song-duration {
+    color: #e0e0e0;
+}
+
+/* Main content area styling */
+main {
+  flex: 1; /* Takes remaining space */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(to bottom, #282828, #121212); /* Subtle gradient background */
+}
+
+/* Toggle playlist button */
+#togglePlaylist {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: #1db954;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  line-height: 1; /* For material icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure it's above other elements */
+  transition: background-color 0.2s ease;
+}
+
+#togglePlaylist:hover {
+  background-color: #1ed760; /* Lighter green on hover */
+}
+
+/* Album art thumbnail */
+.thumbnail {
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  border-radius: 50%; /* For the rotation effect */
+}
+
+.thumbnail img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  animation: rotate 20s linear infinite; /* Slower rotation */
+  animation-play-state: paused; /* Pause initially */
+  border: 5px solid #333; /* Border around the album art */
+}
+
+/* Resume animation when song is playing */
+.thumbnail img.playing {
+  animation-play-state: running;
+}
+
+/* Keyframe for album art rotation */
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Song info (title and artist) */
+.info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.info h2 {
+  font-size: 2.5em;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.info p {
+  font-size: 1.2em;
+  color: #b3b3b3;
+}
+
+/* Progress and Volume containers */
+.progress-container,
+.volume-container {
+  width: 80%;
+  max-width: 500px; /* Max width for sliders */
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.progress-container span,
+.volume-container span {
+  font-size: 0.9em;
+  color: #b3b3b3;
+  width: 40px; /* Fixed width for time display */
+  text-align: center;
+}
+
+/* Styling for range input (sliders) */
+input[type="range"] {
+  width: 100%;
+  height: 8px;
+  background: #535353; /* Darker grey track */
+  border-radius: 5px;
+  outline: none;
+  margin: 0 15px;
+}
+
+/* Slider thumb styling (for Webkit browsers) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1db954; /* Spotify Green thumb */
+  cursor: grab;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s ease;
+}
+
+/* Slider thumb styling (for Firefox) */
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1db954;
+  cursor: grab;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.2s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:active,
+input[type="range"]::-moz-range-thumb:active {
+    cursor: grabbing; /* Cursor when dragging */
+}
+
+/* Control buttons styling */
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5em; /* Larger icons */
+  margin: 0 15px;
+  padding: 5px;
+  border-radius: 50%;
+  transition: color 0.2s ease, transform 0.2s ease;
+  line-height: 1; /* For material icons to align correctly */
+}
+
+.controls button:hover {
+  color: #1db954; /* Green on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Special styling for the main Play/Pause button */
+.controls button#playPause {
+  font-size: 3.5em; /* Even larger play/pause button */
+  background-color: #1db954;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.controls button#playPause:hover {
+  background-color: #1ed760; /* Lighter green on hover */
+  transform: scale(1.05);
+}
+
+/* Material Icons specific styling for vertical alignment */
+.material-icons {
+  vertical-align: middle;
+  font-size: inherit; /* Ensure icon size matches parent button/span */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  aside#playlist {
+    width: 100%;
+    height: auto;
+    transform: translateX(0) !important; /* Override hidden class on small screens for initial view */
+    padding-bottom: 0;
+  }
+
+  /* Make playlist hideable on small screens too */
+  aside#playlist.hidden {
+      transform: translateX(-100%);
+  }
+
+  main {
+    padding-top: 60px; /* Space for toggle button when playlist is hidden */
+  }
+
+  #togglePlaylist {
+    left: auto; /* Remove left positioning */
+    right: 20px; /* Position on the right for mobile */
+  }
+
+  .thumbnail img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .info h2 {
+    font-size: 2em;
+  }
+
+  .info p {
+    font-size: 1em;
+  }
+
+  .progress-container,
+  .volume-container {
+    width: 90%; /* Wider sliders on small screens */
+  }
+
+  .controls button {
+    font-size: 2em;
+    margin: 0 10px;
+  }
+
+  .controls button#playPause {
+    font-size: 3em;
+    width: 50px;
+    height: 50px;
+  }
+}
