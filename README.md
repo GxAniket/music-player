@@ -1,9 +1,14 @@
-# 🎵 Music Player
+<img width="1899" height="921" alt="image" src="https://github.com/user-attachments/assets/998acc4a-61b4-42cc-a306-0e6fb4ef29fb" /># 🎵 Music Player
 
 A sleek and modern Music Player built using **HTML**, **CSS**, and **JavaScript**.  
 It lets you play your favorite songs with a rotating visual effect and a clean user interface.
 
-![Music Player Screenshot](https://github.com/GxAniket/music-player/raw/main/preview.png) <!-- Replace with actual screenshot link if available -->
+--
+# Screenshot
+
+<img width="1899" height="921" alt="image" src="https://github.com/user-attachments/assets/0bd7fc51-88ea-4dad-9c9d-db6e0ee9fa76" />
+
+---
 
 ## 🚀 Live Demo
 
