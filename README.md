@@ -1,3 +1,5 @@
+# 🎵 Music Player
+
 A sleek and modern Music Player built using **HTML**, **CSS**, and **JavaScript**.  
 It lets you play your favorite songs with a rotating visual effect and a clean user interface.
 
