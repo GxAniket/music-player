@@ -51,8 +51,38 @@ const songs = [
     img: "images/interstellar.png",
   },
   {
+    title: "1nonly – Stay With Me",
+    artist: "1nonly",
+    src: "music/1nonly – Stay With Me.mp3",
+    img: "images/Stay With Me.png",
+  },
+  {
+    title: "Where you are(vocals only)",
+    artist: "Halal Beats",
+    src: "music/Where you are Vocals only.mp3",
+    img: "images/Where you are.png",
+  },
+  {
+    title: "Yomoti - Too Unusual",
+    artist: "Yomoti",
+    src: "music/Yomoti - Too Unusual.mp3",
+    img: "images/Too Unusual.png",
+  },
+  {
+    title:"Sunflower",
+    artist:"Post Malone, Swae Lee",
+    src:"music/Sunflower.mp3",
+    img:"images/Sunflower.png",
+  },
+  {
+    title:"Blinding Light",
+    artist:"Weeknd",
+    src:"music/Blinding Light.mp3",
+    img:"images/The Weeknd.png",
+  },
+  {
     title: "Drowning (slowed + reverb)",
-    artist: "Aniket Sundriyal",
+    artist:"Aniket Sundriyal",
     src: "music/Drowning (slowed + reverb).mp3",
     img: "images/aniket.png",
   }
