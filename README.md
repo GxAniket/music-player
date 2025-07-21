@@ -5,9 +5,16 @@ It lets you play your favorite songs with a rotating visual effect and a clean u
 
 --
 
-# Screenshot
+# Screenshot 1
 
 <img width="1899" height="921" alt="image" src="https://github.com/user-attachments/assets/0bd7fc51-88ea-4dad-9c9d-db6e0ee9fa76" />
+
+
+----
+
+ #Screenshot 2
+<img width="1900" height="917" alt="image" src="https://github.com/user-attachments/assets/956f57b0-0e62-442d-b2a4-973ceda2a612" />
+
 
 ---
 
