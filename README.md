@@ -35,12 +35,13 @@ It lets you play your favorite songs with a rotating visual effect and a clean u
 ---
 
 ## 📁 Project Structure
+<pre>
 ├── index.html # Main HTML file
 ├── style.css # Stylesheet
 ├── script.js # JavaScript logic
 ├── images/ # Album covers or UI images
 └── songs/ # MP3 or audio files
-
+</pre>
 ---
 
 ---
