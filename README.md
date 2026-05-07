@@ -75,14 +75,16 @@ Music provided by http://ncs.io
 
 > **Note:** Here is the evolution of the player from Version 1 to Version 2.
 
-### 📸 Desktop View (Version 2 - New Premium UI)
-<img width="100%" alt="Music Player Desktop UI V1" src="https://github.com/user-attachments/assets/956f57b0-0e62-442d-b2a4-973ceda2a612" />
-
 ### 📸 Desktop View (Version 1 - First Release)
 <img width="100%" alt="Music Player Desktop UI V1" src="https://github.com/user-attachments/assets/956f57b0-0e62-442d-b2a4-973ceda2a612" />
 
+### 📸 Desktop View (Version 2 - New Premium UI)
+<img width="100%" alt="Music Player Desktop UI V2" src="https://github.com/user-attachments/assets/3fd269b1-7b62-4c80-b218-46ff23e137e9" />
+
 ### 📸 Mobile View (Version 2)
-<img width="100%" alt="Music Player Desktop UI V1" src="https://github.com/user-attachments/assets/956f57b0-0e62-442d-b2a4-973ceda2a612" />
+<p align="center">
+  <img width="350" alt="Music Player Mobile UI V2" src="https://github.com/user-attachments/assets/f7f90d79-e469-410e-b0c7-a1439e1a59e4" />
+</p>
 
 ---
 
