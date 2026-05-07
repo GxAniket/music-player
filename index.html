@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GX Aniket MP3 Player</title>
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="ambient-bg" id="dynamicBg">
+    <div class="glow blob-1"></div>
+    <div class="glow blob-2"></div>
+    <div class="glow blob-3"></div>
+  </div>
+
+  <div class="container glass-panel">
+    
+    <aside id="playlist" class="glass-panel-inner">
+      <div class="sidebar-header">
+        <h3><span class="material-symbols-rounded">queue_music</span> Library</h3>
+        <button id="closePlaylist" class="material-symbols-rounded mobile-only">close</button>
+      </div>
+      <div class="playlist-container">
+        <ul id="songList">
+          </ul>
+      </div>
+    </aside>
+
+    <main>
+      <header class="top-nav">
+        <button id="togglePlaylist" class="material-symbols-rounded">menu</button>
+        
+        <div class="brand">
+          <span class="material-symbols-rounded">graphic_eq</span>
+          <span>GX Aniket MP3 Player</span>
+        </div>
+        
+        <div class="dropdown-container">
+          <button id="moreOptions" class="material-symbols-rounded">more_vert</button>
+          <div id="dropdownMenu" class="dropdown-content">
+            <a href="https://github.com/GxAniket" target="_blank">
+              <span class="material-symbols-rounded">code</span> GitHub
+            </a>
+            <a href="https://aniket-portfolio-react.vercel.app/" target="_blank">
+              <span class="material-symbols-rounded">person</span> Portfolio
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <div class="player-core">
+        <div class="artwork-wrapper">
+          <div class="animated-ring"></div>
+          <div class="thumbnail">
+            <img id="albumArt" src="images/default.jpg" alt="Album Art" />
+          </div>
+        </div>
+
+        <div class="info">
+          <h2 id="title">Select a Track</h2>
+          <p id="artist">Artist Name</p>
+        </div>
+
+        <div class="progress-wrapper">
+          <span id="currentTime" class="time-stamp">0:00</span>
+          <div class="progress-bar-container">
+            <input type="range" id="progress" value="0" min="0" max="100" step="0.1" />
+          </div>
+          <span id="duration" class="time-stamp">0:00</span>
+        </div>
+
+        <div class="controls">
+          <button id="shuffleBtn" class="control-btn small"><span class="material-symbols-rounded">shuffle</span></button>
+          <button id="prev" class="control-btn medium"><span class="material-symbols-rounded">skip_previous</span></button>
+          
+          <button id="playPause" class="control-btn large play-btn">
+            <span class="material-symbols-rounded">play_arrow</span>
+          </button>
+          
+          <button id="next" class="control-btn medium"><span class="material-symbols-rounded">skip_next</span></button>
+          <button id="repeatBtn" class="control-btn small"><span class="material-symbols-rounded">repeat</span></button>
+        </div>
+
+        <div class="volume-wrapper">
+          <span class="material-symbols-rounded">volume_down</span>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+          <span class="material-symbols-rounded">volume_up</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
